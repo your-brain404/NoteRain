@@ -47,17 +47,22 @@
 				})
 				.then(async (userData) => {
 					console.log("succeeded");
-					localStorage.setItem('user', userData);
+					this.$store.commit('user', userData);
 					alert('Pomyślnie utworzono konto!');
 					this.$navigateTo(this.$routes.App);
 					
 				})
 				.catch((err) => {
 					console.log(err);
-					commit("authError", translateErrors(err));
+					alert('Coś poszło nie tak...')
 				});
 			}
-		}
+		},
+		created() {
+            if(this.$store.getters.user) {
+                this.$navigateTo(this.$routes.MyNotes);
+            }
+        }
 		
 	}
 </script>

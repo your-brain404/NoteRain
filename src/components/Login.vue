@@ -21,7 +21,12 @@
 			login() {
 				alert('login');
 			}
-		}
+		},
+		created() {
+            if(this.$store.getters.user) {
+                this.$navigateTo(this.$routes.MyNotes);
+            }
+        }
 
 	}
 </script>

@@ -19,6 +19,12 @@
                 alert('register');
             }
         },
+        created() {
+            this.$store.dispatch('autoLogin');
+            if(this.$store.getters.user) {
+                this.$navigateTo(this.$routes.MyNotes);
+            }
+        }
     }
 </script>
 <style>
@@ -28,8 +34,6 @@
         font-weight: 500;
         text-transform: uppercase!important;
         padding: 50px 24px;
-    }
-    Page {
     }
     .auth-buttons {
         display: flex;

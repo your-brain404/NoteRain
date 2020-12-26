@@ -5,6 +5,7 @@ import Auth from './modules/auth';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: { Auth }
-  
+	modules: { 
+		Auth
+	}
 });
