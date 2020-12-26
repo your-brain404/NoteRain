@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "499776004463",
+    "project_id": "noterain-8d045",
+    "storage_bucket": "noterain-8d045.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499776004463:android:e7502dd8465ec0618fc89a",
+        "android_client_info": {
+          "package_name": "org.nativescript.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499776004463-vmpf14114lhcleqmhgui50ffa0bkt9eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGk4DA38sE-g68Mzfxcz3AN_lpuXpwhvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499776004463-vmpf14114lhcleqmhgui50ffa0bkt9eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
