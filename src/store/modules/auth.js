@@ -1,4 +1,4 @@
-import { firebase } from "@nativescript/firebase";
+import {firebase} from "@nativescript/firebase";
 
 export default {
 	state: {
@@ -12,13 +12,17 @@ export default {
 	},
 	actions: {
 		autoLogin({commit}) {
-			firebase.getCurrentUser().then(async (currentUser) => {
+			firebase.getCurrentUser().then(currentUser => {
 				console.log("authInit succeded");
-				if (currentUser !== null) commit("user", currentUser);
-			})
-			.catch((err) => {
+				if(currentUser !== null) commit("user", currentUser);
+			}).catch((err) => {
 				console.log(err)
 			});
-		}
+		},
+		logout({commit}) {
+			firebase.logout();
+			commit("user", {});
+			alert('Pomyślne wylogowano!');
+		} 
 	}
 }

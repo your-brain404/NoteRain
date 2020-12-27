@@ -5,7 +5,7 @@
 			<TextField  v-model="email" hint="Adres E-mail" />
 			<TextField :secure="true" v-model="password"  hint="Hasło" />
 			<TextField :secure="true" v-model="confirmPassword"  hint="Powtórz Hasło" />
-			<Button text="Zarejestruj się!" @tap="register" />
+			<Button text="Zarejestruj się!" class="success-button" @tap="register" />
 		</FlexboxLayout>
 	</Page>
 </template>
@@ -58,11 +58,7 @@
 				});
 			}
 		},
-		created() {
-            if(this.$store.getters.user) {
-                this.$navigateTo(this.$routes.MyNotes);
-            }
-        }
+		
 		
 	}
 </script>
